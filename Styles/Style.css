@@ -1,0 +1,177 @@
+:root{
+    --orange: orange;
+    --orange-red: orangered;
+    --blue: blue;
+    --black: black;
+    --white: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+header{
+    padding: .5em;
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    
+    & h1{font-size: 175%;}
+
+    & img {
+       width: clamp(45px, 100%, 100px);
+        vertical-align: middle;
+        padding: 0 1em 0 1em
+    }
+}
+
+main{
+    background-color: var(--orange);
+
+    & h2{
+        text-align: center;
+        font-size: 150%;}
+
+    & p{
+        padding: 0.5em;
+    }
+}
+
+audio{
+    float: left;
+    margin-top: .5em;
+    margin-left: 3em;
+    padding-right: 1em
+}
+
+.navbar {
+	position: relative;
+	background-color: var(--orange-red);
+	& ul
+        {      
+        display: flex;
+        align-items: center;
+        list-style-type: none;          
+        margin: 0;
+        min-height: 3em;
+        }
+	
+	& a {
+		display: block;
+		padding: .75em;
+		text-decoration: none;
+		color: var(--blue);
+	}
+	& a.current { 
+        color: var(--white);
+        border: 2px solid var(--white);
+        border-radius: 20px; 
+	}
+}
+
+
+.tablefigure{
+
+    padding: 1em
+}
+
+.captionnimbus{
+    
+    clear:left;
+    
+    & img{
+        width: 20%;
+        vertical-align: middle;
+        padding: 0 .5em .5em .5em
+    }
+
+    & .nimbusleft{
+        float:left;
+        vertical-align: middle;
+    }
+
+     & .nimbusright{
+        float:right;
+        vertical-align: middle;
+    }
+}
+
+table {
+    clear:right;
+    border-collapse: collapse;
+	border: 2px solid var(--black);
+    font-size: 100%;
+    margin: 1em auto;
+    
+    & caption{
+        font-size: 150%;
+        font-weight: bold;
+    }
+    }
+
+td {
+    border: 1px solid var(--black);
+	padding: .35em 4em .35em .5em;
+	text-align: left;
+	vertical-align: middle;
+	}
+
+thead{
+	color: var(--blue);
+    background-color: var(--orange-red);
+    font-weight: bold;
+    text-align: center;
+}
+
+th{
+    border: 1px solid var(--black);
+    padding: .5em;
+}
+
+footer {
+    background-color: var(--blue);
+    font-size: 75%;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+ @media only screen and (width < 640px) {
+    header{
+        h1{
+            font-size: 115%;
+        }
+
+        & img {
+            width: clamp(30px, 100%, 75px);
+            vertical-align: middle;
+            padding: 0 1em 0 1em
+    }
+    }
+
+
+    .captionnimbus{
+        
+        text-align: center;
+        font-size: 100%;}
+
+    th, td{display: block;}
+    
+    thead{display: none;}
+
+    tbody td:first-child{
+        color: var(--blue);
+        font-weight: bold;
+        background-color: var(--orange-red);    
+    }
+
+
+ }
+  
